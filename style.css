@@ -1,0 +1,167 @@
+/* --- إعدادات عامة --- */
+:root {
+    --primary-color: #1a1a1a; /* اللون الداكن من اللوجو */
+    --accent-color: #c5a065;  /* اللون الذهبي من اللوجو */
+    --bg-color: #fdfaf7;      /* لون الخلفية الفاتح من اللوجو */
+    --text-color: #333;
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Open Sans', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+header {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+.logo-img {
+    max-width: 180px; /* تحكم في حجم اللوجو هنا */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover { color: var(--accent-color); }
+
+/* --- Hero Section --- */
+.hero {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f5ede5;
+}
+
+.hero h2 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* --- Product Grid --- */
+.main { padding: 50px 0; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.product-card:hover { transform: translateY(-5px); }
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* لضبط الصور لتملأ المربع */
+}
+
+.product-info { padding: 25px; text-align: center; }
+
+.product-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.stock-alert {
+    color: #d9534f; /* لون تنبيه أحمر */
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.low-stock { color: #5cb85c; /* لون أخضر للمنتجات المتوفرة */ }
+
+.price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin: 15px 0;
+}
+
+/* --- زر الواتساب --- */
+.whatsapp-btn {
+    display: inline-block;
+    width: 100%;
+    background-color: #25d366; /* لون واتساب */
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover { background-color: #128c7e; }
+
+/* --- Footer --- */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.social-links { margin-top: 15px; }
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    opacity: 0.8;
+}
+.social-links a:hover { opacity: 1; }
+
+/* --- Responsive Design (للهواتف) --- */
+@media (max-width: 768px) {
+    .hero h2 { font-size: 2.5rem; }
+    nav a { margin: 0 8px; font-size: 1rem; }
+}
+.logo-img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+     mix-blend-mode: multiply; 
+}
+header {
+    background-color: #fdfaf7; /* هذا اللون هو نفس لون خلفية اللوجو تقريباً */
+    padding: 20px 0;
+    text-align: center;
+}
